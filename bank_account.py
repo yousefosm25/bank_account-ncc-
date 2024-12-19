@@ -1,4 +1,11 @@
 class Bank_Account:
+    def continu(self):
+        continu=input("Do you want to Continue(yes/no): ")
+        if continu.lower()=="yes":
+            self.account()
+        else:
+            print("Thank you for using the Bank Account System")
+            exit()
     def account(self):
         print("Welcome to the Bank Account System")
         self.bankpin=int(input("Bank PIN: "))
@@ -11,28 +18,13 @@ class Bank_Account:
             choice=int(input("Enter your choice: "))
             if choice==1:
                 self.deposit()
-                continu=input("Do you want to Continue(yes/no): ")
-                if continu.lower()=="yes":
-                    self.account()
-                else:
-                    print("Thank you for using the Bank Account System")
-                    exit()
+                self.continu()
             elif choice==2:
                 self.withdraw()
-                continu=input("Do you want to Continue(yes/no): ")
-                if continu.lower()=="yes":
-                    self.account()
-                else:
-                    print("Thank you for using the Bank Account System")
-                    exit()
+                self.continu()
             elif choice==3:
                 self.display_balance()
-                continu=input("Do you want to Continue(yes/no): ")
-                if continu.lower()=="yes":
-                    self.account()
-                else:
-                    print("Thank you for using the Bank Account System")
-                    exit()
+                self.continu()
             elif choice == 4:
                 print("Thank you for using the Bank Account System")
                 exit()
